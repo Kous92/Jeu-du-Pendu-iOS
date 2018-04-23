@@ -17,6 +17,7 @@ class ViewController: UIViewController
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var imageHangmanLabel: UIImageView!
     @IBOutlet weak var buttonState: UIButton!
+    @IBOutlet var keyboardButtons: [UIButton]!
     
     var jeu: Hangman = Hangman()
     var secondes = 0
@@ -54,6 +55,13 @@ class ViewController: UIViewController
                 {
                     secondes = 6
                     print("C'est la bonne touche")
+                    
+                    sender.isEnabled = false
+
+                    if (sender.isEnabled == false)
+                    {
+                        print("Le bouton \(sender.currentTitle!) est désactivé \n")
+                    }
                 }
                 else
                 {
@@ -64,6 +72,13 @@ class ViewController: UIViewController
                     imageName = "Hangman-" + String(imageNumber)
                     imageHangmanLabel.image = UIImage(named: imageName)
                     print("Mauvaise touche !")
+                    
+                    sender.isEnabled = false
+                    
+                    if (sender.isEnabled == false)
+                    {
+                        print("Le bouton \(sender.currentTitle!) est désactivé \n")
+                    }
                 }
             }
             
@@ -85,7 +100,8 @@ class ViewController: UIViewController
                 essaisLabel.text = "Essais: " + String(jeu.essais)
                 gameOverLabel.isHidden = false
                 gameOverLabel.text = "PERDU !"
-                letterLabel.isHidden = true
+                letterLabel.textColor = UIColor.red
+                letterLabel.text = "Le bon mot: " + jeu.motSecret
                 print("Fin de partie, chrono désactivé")
                 timer.invalidate()
                 
@@ -113,8 +129,10 @@ class ViewController: UIViewController
             setButtonState()
             imageNumber = 0
             
+            enableKeyboard()
             jeu.initialiserJeu()
             
+            letterLabel.textColor = UIColor.black
             essaisLabel.text = "Essais: " + String(jeu.essais)
             gameOverLabel.isHidden = true
             imageHangmanLabel.image = UIImage(named: "Hangman-0")
@@ -227,6 +245,8 @@ class ViewController: UIViewController
             timeLabel.textColor = UIColor.red
             essaisLabel.text = "Essais: " + String(jeu.essais)
             gameOverLabel.text = "PERDU !"
+            letterLabel.textColor = UIColor.red
+            letterLabel.text = "Le bon mot: " + jeu.motSecret
             print("Fin de partie, chrono désactivé")
             
             setButtonState()
@@ -252,6 +272,22 @@ class ViewController: UIViewController
             buttonState.setTitle("Arrêter", for: .normal)
             
             start = true
+        }
+    }
+    
+    func enableKeyboard()
+    {
+        for key in keyboardButtons
+        {
+            if (key.isEnabled == false)
+            {
+                key.isEnabled = true
+                
+                if (key.isEnabled == true)
+                {
+                    print("Le bouton \(key.currentTitle!) est activé")
+                }
+            }
         }
     }
 }

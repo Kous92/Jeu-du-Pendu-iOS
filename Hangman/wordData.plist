@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>MAZDA</string>
+	<string>W MOTORS</string>
+	<string>CITROEN</string>
+	<string>CHEVROLET</string>
+	<string>ALFA ROMEO</string>
+	<string>YAMAHA</string>
+	<string>KTM</string>
+	<string>APRILIA</string>
+	<string>DUCATI</string>
+	<string>DODGE</string>
+	<string>SUZUKI</string>
+	<string>SAVAGE RIVALE</string>
+	<string>ASTON MARTIN</string>
+	<string>KAWASAKI</string>
+	<string>BUGATTI</string>
+	<string>BENTLEY</string>
+	<string>FERRARI</string>
+	<string>LAMBORGHINI</string>
+	<string>MCLAREN</string>
+	<string>KOENIGSEGG</string>
+	<string>PAGANI</string>
+	<string>FORD</string>
+	<string>SSC</string>
+	<string>ZENVO</string>
+	<string>APOLLO</string>
+	<string>NISSAN</string>
+	<string>ARASH</string>
+	<string>HENNESSEY</string>
+	<string>AUDI</string>
+	<string>MERCEDES</string>
+	<string>BMW</string>
+	<string>PORSCHE</string>
+	<string>JAGUAR</string>
+	<string>LOTUS</string>
+	<string>SHELBY</string>
+	<string>MAZZANTI</string>
+	<string>MOSLER</string>
+	<string>DEVEL</string>
+	<string>ARRINERA</string>
+	<string>CADILLAC</string>
+	<string>DONKERVOORT</string>
+	<string>HONDA</string>
+	<string>MARUSSIA</string>
+	<string>MITSUBISHI</string>
+	<string>SUBARU</string>
+	<string>PEUGEOT</string>
+	<string>RENAULT</string>
+	<string>TOYOTA</string>
+	<string>TRION</string>
+	<string>VOLKSWAGEN</string>
+	<string>TESLA</string>
+	<string>RIMAC</string>
+	<string>MASERATI</string>
+	<string>LEXUS</string>
+	<string>CHRYSLER</string>
+</array>
+</plist>
